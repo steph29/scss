@@ -1,0 +1,44 @@
+@mixin colorCard($color: teal) {
+  background-color: $color;
+  @if ($color != white) {
+    & > .avatar > .title > h3 {
+      color: rgba($color: white, $alpha: 0.5);
+    }
+
+    & > p {
+      color: rgba($color: white, $alpha: 0.7);
+    }
+  } @else {
+    & > title > h3 {
+      color: rgba($color: gray, $alpha: 0.5);
+    }
+    & h1 {
+      color: hsl(217, 19%, 35%);
+    }
+    & > p {
+      color: rgba($color: gray, $alpha: 0.7);
+    }
+  }
+}
+
+@mixin avatar() {
+  & img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+@mixin titleDrawing() {
+  .avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    line-height: 0.5rem;
+    @include avatar();
+  }
+  .title {
+    padding-left: 2rem;
+  }
+}
