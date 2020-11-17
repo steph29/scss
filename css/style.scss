@@ -102,3 +102,47 @@ h2 {
 .attribution {
   grid-row: 3;
 }
+
+@media only screen and (max-width: 375px) {
+  body {
+    display: grid;
+    width: 100%;
+    font-size: 1.1rem;
+    grid-template-columns: minmax(375px, auto);
+    grid-auto-rows: minmax(50px, auto);
+  }
+  .card {
+    padding: 1rem;
+  }
+  .card1 {
+    grid-row: 1;
+    grid-column: 1;
+    .quote {
+      position: absolute;
+      left: 16.5rem;
+      top: 0rem;
+      width: 10rem;
+      z-index: 0;
+    }
+  }
+  .card2 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .card3 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .card4 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .card5 {
+    grid-row: 5;
+    grid-column: 1;
+  }
+  .attribution {
+    grid-row: 6;
+    grid-column: 1;
+  }
+}
